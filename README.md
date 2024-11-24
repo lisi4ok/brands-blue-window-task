@@ -1,8 +1,25 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center">
+<a href="https://laravel.com" target="_blank">
+<img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
+</a>
+</p>
 
-# Brands Blue Window Application
+# Brands - Blue Window Job Task
 
-Laravel application with Vite + TypeScript + Vue 3 + Interia JS  +
+### Application Technologies: 
++ Laravel
++ Vite
++ TypeScript
++ Vue 3
++ Inertia JS
++ Tailwind Css
++ etc..
+
+### The project is started from GitHub template:
+
+- https://github.com/lisi4ok/laravel-skeleton-vite-vue
+
+
 
 ## Choose a Database and copy `ENV` file
 
