@@ -44,7 +44,16 @@ php artisan storage:link
 php artisan migrate
 ```
 
+```
+php artisan db:seed
+```
+
 ## Start
+No SQLite Database:
+```
+docker compose -f docker-compose-{mysql|postgres}.yml up -d
+```
+
 ```
 {bun/deno/npm} run dev
 ```
@@ -52,7 +61,6 @@ php artisan migrate
 ```
 php artisan serve
 ```
-
 
 ## License
 
