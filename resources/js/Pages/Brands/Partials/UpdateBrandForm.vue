@@ -104,14 +104,19 @@ const clearImageFileInput = () => {
             <div>
                 <InputLabel for="rating" value="Rating" />
 
-                <TextInput
-                    id="rating"
-                    type="text"
-                    class="mt-1 block w-full"
-                    v-model="form.rating"
-                    autofocus
-                    autocomplete="rating"
-                />
+                <select v-model="form.rating"
+                        id="rating"
+                        class="mt-1 block w-full
+                        border-gray-300 dark:border-gray-700
+                        focus:border-indigo-500 dark:focus:border-indigo-600
+                        focus:ring-indigo-500 dark:focus:ring-indigo-600
+                        dark:bg-gray-900 dark:text-gray-300
+                        rounded-md shadow-sm"
+                >
+                    <option v-for="value in 4">
+                        {{ value }}
+                    </option>
+                </select>
 
                 <InputError class="mt-2" :message="form.errors.rating"/>
             </div>

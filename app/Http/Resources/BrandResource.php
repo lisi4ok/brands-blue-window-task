@@ -20,6 +20,7 @@ class BrandResource extends JsonResource
             'image' => $this->image,
             'image_url' => $this->image_url,
             'rating' => $this->rating,
+            'rating_percentage' => ($this->rating /4) * 100,
             'geolocation' => $this->geolocation,
             'created_at' => $this->created_at->format(config('app.datetime_format')),
             'created_at_ago' => $this->created_at->diffForHumans(),

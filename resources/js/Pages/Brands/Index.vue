@@ -96,7 +96,7 @@ const createBrand = () => {
                                 </template>
                             </td>
                             <td class="px-2 py-4">
-                                {{ brand.rating }}
+                              <div><div class="stars"><div :style="{ width: brand.rating_percentage + '%' }"></div></div></div>
                             </td>
                             <td class="px-2 py-4">
                                 {{ brand.geolocation }}
@@ -130,3 +130,22 @@ const createBrand = () => {
         </div>
     </AuthenticatedLayout>
 </template>
+
+<style scoped lang="scss">
+.stars,
+.starsbg {
+  width: 85px;
+  height: 16px;
+  background: url(/static/rating.png) 0 bottom repeat-x;
+  margin: 15px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.stars div,
+.starsbg div.starsfg {
+  position: absolute;
+  height: 100%;
+  background: url(/static/rating.png) 0 0 repeat-x;
+}
+</style>
