@@ -66,6 +66,8 @@ return [
     */
 
     'timezone' => env('APP_TIMEZONE', 'UTC'),
+    'date_format' => env('APP_DATE_FORMAT', explode('\\', DateTimeInterface::ATOM)[0]),
+    'datetime_format' => env('APP_DATETIME_FORMAT', DateTimeInterface::ATOM),
 
     /*
     |--------------------------------------------------------------------------
@@ -123,5 +125,7 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
-    'first_user_password' => env('FIRST_USER_PASSWORD', 'password'),
+    'pagination' => [
+        'count' => 50,
+    ],
 ];

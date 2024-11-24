@@ -8,6 +8,8 @@ use Illuminate\Http\RedirectResponse;
 use Inertia\Inertia;
 use Inertia\Response;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\BrandsController;
+use App\Http\Controllers\ImageController;
 
 Route::get('/', function (): Response {
     return Inertia::render('Welcome', [
@@ -35,6 +37,11 @@ Route::middleware('auth')->group(function (): void {
 
         return Redirect::back()->with('data', $request->input());
     })->name('dates.update');
+
+    Route::resource('brands', BrandsController::class)->except(['show']);
+
+    Route::delete('image/{id}/{model}', [ImageController::class, 'destroy'])->name('image.destroy');
+
 });
 
 require __DIR__.'/auth.php';
