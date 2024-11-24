@@ -67,8 +67,8 @@ const clearImageFileInput = () => {
 <template>
     <section>
         <header>
-            <h2 class="text-lg font-medium text-gray-900">Create Brand</h2>
-            <p class="mt-1 text-sm text-gray-600">
+            <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">Create Brand</h2>
+            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
                 Create Brand form
             </p>
         </header>
