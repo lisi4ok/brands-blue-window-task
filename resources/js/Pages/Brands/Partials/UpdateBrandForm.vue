@@ -9,7 +9,8 @@ import SecondaryButton from '@/Components/SecondaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 
 const props = defineProps<{
-    brand?: Object;
+    brand: Object;
+    countries: Object;
 }>();
 
 const form = useForm({
@@ -119,6 +120,26 @@ const clearImageFileInput = () => {
                 </select>
 
                 <InputError class="mt-2" :message="form.errors.rating"/>
+            </div>
+
+            <div>
+                <InputLabel for="geolocation" value="GeoLocation" />
+
+                <select v-model="form.geolocation"
+                        id="geolocation"
+                        class="mt-1 block w-full
+                        border-gray-300 dark:border-gray-700
+                        focus:border-indigo-500 dark:focus:border-indigo-600
+                        focus:ring-indigo-500 dark:focus:ring-indigo-600
+                        dark:bg-gray-900 dark:text-gray-300
+                        rounded-md shadow-sm"
+                >
+                    <option v-for="country in countries" :value="country.code">
+                        { {{ country.code }} } {{ country.name }}
+                    </option>
+                </select>
+
+                <InputError class="mt-2" :message="form.errors.geolocation" />
             </div>
 
             <div class="col-span-6 sm:col-span-4">

@@ -15,6 +15,7 @@ class DatabaseSeeder extends BaseSeeder
      */
     public function run(): void
     {
-        $this->call(CreateFirstUser::class);
+        //$this->call(CreateFirstUser::class);
+        $this->call(CountriesSeeder::class);
     }
 }

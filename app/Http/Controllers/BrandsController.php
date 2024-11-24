@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Requests\BrandRequest;
 use App\Http\Resources\BrandResource;
 use App\Models\Brand;
+use App\Models\Country;
 use Illuminate\Http\RedirectResponse;
 use Inertia\Inertia;
+use PHPUnit\Framework\Constraint\Count;
 
 class BrandsController extends Controller
 {
@@ -29,6 +31,7 @@ class BrandsController extends Controller
     {
         return Inertia::render('Brands/Create', [
             'defaultImagePath' => Brand::$defaultImagePath,
+            'countries' => Country::all(),
         ]);
     }
 
@@ -51,7 +54,10 @@ class BrandsController extends Controller
     {
         $brand = Brand::findOrFail($id);
 
-        return Inertia::render('Brands/Edit', ['brand' => $brand]);
+        return Inertia::render('Brands/Edit', [
+            'brand' => $brand,
+            'countries' => Country::all(),
+        ]);
     }
 
     /**
