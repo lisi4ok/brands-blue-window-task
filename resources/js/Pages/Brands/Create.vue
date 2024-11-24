@@ -10,7 +10,7 @@ const props = defineProps<{
 </script>
 
 <template>
-    <Head title="Admin - Create new Team Member" />
+    <Head title="Create Brand" />
 
     <AuthenticatedLayout>
         <template #header>
