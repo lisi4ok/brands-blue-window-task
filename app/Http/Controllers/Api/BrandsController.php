@@ -15,6 +15,20 @@ class BrandsController extends Controller
      */
     public function index(Request $request)
     {
+//        $geolocation = null;
+//        if ($header = $request->header('CF-IPCountry')) {
+//            $geolocation = $header;
+//        } elseif ($request->has('CF-IPCountry')) {
+//            $request = $request->all();
+//            $geolocation = $request['CF-IPCountry'];
+//        }
+//
+//        if ($geolocation === null) {
+//            $brands = Brand::where(['geolocation' => $geolocation])->get();
+//        } else {
+//            $brands  = Brand::all();
+//        }
+
         return BrandResource::collection(
             Brand::all()
         );

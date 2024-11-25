@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import { route } from 'ziggy-js';
 import { Head } from '@inertiajs/vue3';
 import Header from '@/Partials/Header.vue';
-import Pagination from "@/Components/Pagination.vue";
 
 defineProps<{
     canLogin?: boolean;
@@ -13,6 +11,40 @@ defineProps<{
 }>();
 
 const brands = ref([]);
+// const geolocation = ref(null);
+//
+// const cloudflareFallbackURLs = ['https://one.one.one.one/cdn-cgi/trace',
+//     'https://1.0.0.1/cdn-cgi/trace',
+//     'https://cloudflare-dns.com/cdn-cgi/trace',
+//     'https://cloudflare-eth.com/cdn-cgi/trace',
+//     'https://cloudflare-ipfs.com/cdn-cgi/trace',
+//     'https://workers.dev/cdn-cgi/trace',
+//     'https://pages.dev/cdn-cgi/trace',
+//     'https://cloudflare.tv/cdn-cgi/trace',
+// ];
+//
+// async function getCloudflareJSON() {
+//     let data = await fetchWithFallback(cloudflareFallbackURLs).then(res=>res.text());
+//     let arr = data.trim().split('\n').map(e=>e.split('='));
+//     return Object.fromEntries(arr)['loc'];
+// }
+// async function fetchWithFallback(links, obj) {
+//     let response;
+//     for (let link of links) {
+//         try {
+//             response = await fetch(link, obj)
+//             if (response.ok)
+//                 return response;
+//         } catch (e) { }
+//     }
+//     return response;
+// }
+//
+//
+// getCloudflareJSON().then(response => {
+//     geolocation.value = response;
+// });
+
 
 const getBrands = () => {
     axios.post('api/brands')
