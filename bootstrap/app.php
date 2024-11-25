@@ -18,8 +18,8 @@ return Application::configure(basePath: dirname(__DIR__))
             \App\Http\Middleware\RequestModelBinding::class,
         ]);
 
-        $middleware->statefulApi();
-        $middleware->throttleApi();
+        //$middleware->statefulApi();
+        //$middleware->throttleApi();
 
         $middleware->alias([
             'verified' => \App\Http\Middleware\EnsureEmailIsVerified::class,

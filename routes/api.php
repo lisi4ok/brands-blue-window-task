@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\JsonResponse;
 use Tighten\Ziggy\Ziggy;
+use App\Http\Controllers\Api\BrandsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request): mix
 Route::get('ziggy/{group?}', fn ($group = null): JsonResponse => response()->json(
     $group === null ? new Ziggy : new Ziggy([$group])
 ));
+
+Route::post('brands', [BrandsController::class, 'index'])->name('api.brands');

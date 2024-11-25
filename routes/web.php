@@ -12,7 +12,7 @@ use App\Http\Controllers\BrandsController;
 use App\Http\Controllers\ImageController;
 
 Route::get('/', function (): Response {
-    return Inertia::render('Welcome', [
+    return Inertia::render('Brands', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,

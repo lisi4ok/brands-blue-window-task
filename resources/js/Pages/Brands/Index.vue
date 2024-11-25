@@ -92,7 +92,7 @@ const createBrand = () => {
                             </th>
                             <td class="px-2 py-4">
                                 <template v-if="brand.image">
-                                    <img :src="brand.image_url" :alt="brand.name" class="bg-gray-900" />
+                                    <img :src="brand.image_url" :alt="brand.name" />
                                 </template>
                             </td>
                             <td class="px-2 py-4">
@@ -148,4 +148,16 @@ const createBrand = () => {
   height: 100%;
   background: url(/static/rating.png) 0 0 repeat-x;
 }
+
+
+@media (max-width: 768px) {
+    table thead {
+        display: none!important;
+    }
+
+    table, thead, tbody, th, td, tr, tfoot {
+        display: block!important;
+    }
+}
+
 </style>

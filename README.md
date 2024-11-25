@@ -68,7 +68,7 @@ php artisan db:seed
 ## Start
 No SQLite Database:
 ```
-docker compose -f docker-compose-{mysql|postgres}.yml up -d
+docker compose -f ./docker-compose-{mysql|postgres}.yml up -d
 ```
 
 ```
